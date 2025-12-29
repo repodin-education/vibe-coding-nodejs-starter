@@ -71,8 +71,10 @@ Create JavaScript code that fetches from http://localhost:3000/api/hello and dis
 
 ### Getting Help
 
-- See [Student Guide](../../../materials/student-guide.md)
-- Check [FAQ](../../../materials/faq.md)
+> **⚠️ TÄRKEÄ OPETTAJALLE:** Kun kopioit tämän README.md:n GitHub-repositorioon, **korvaa relative pathit** absoluuttisilla URL:illa. Katso ohjeet: [`setup/github-classroom-setup.md`](../../setup/github-classroom-setup.md#533-korjaa-linkit-github-classroomissa)
+
+- See [Student Guide](https://repodin-education.github.io/vibe-coding-materials/student-guide.html)
+- Check [FAQ](https://repodin-education.github.io/vibe-coding-materials/faq.html)
 - Ask in help channel
 
 ---
