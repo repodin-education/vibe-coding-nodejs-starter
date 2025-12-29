@@ -8,7 +8,7 @@ This is the starter template for **Assignment 2: E2E Hello World (Server → Bro
 
 Build a complete minimal app pipeline:
 - A Node.js Express server
-- Returns "Hello Vibe!" from an API endpoint
+- Returns "Hello World!" from an API endpoint
 - Simple static HTML page fetches the message and displays it in the browser
 - All generated using Cursor AI
 
@@ -16,7 +16,7 @@ Build a complete minimal app pipeline:
 
 1. **Server:**
    - Create endpoint: `GET /api/hello`
-   - Endpoint should return: `{ message: "Hello Vibe!" }`
+   - Endpoint should return: `{ message: "Hello World!" }`
    - Server should run on port 3000
 
 2. **Client:**
@@ -54,7 +54,7 @@ Build a complete minimal app pipeline:
 
 **For Server:**
 ```
-Create a Node.js Express server endpoint GET /api/hello that returns { message: "Hello Vibe!" }. The server should run on port 3000 and include CORS headers for local development.
+Create a Node.js Express server endpoint GET /api/hello that returns { message: "Hello World!" }. The server should run on port 3000 and include CORS headers for local development.
 ```
 
 **For Client:**
@@ -71,15 +71,14 @@ Create JavaScript code that fetches from http://localhost:3000/api/hello and dis
 
 ### Getting Help
 
-> **⚠️ TÄRKEÄ OPETTAJALLE:** Kun kopioit tämän README.md:n GitHub-repositorioon, **korvaa relative pathit** absoluuttisilla URL:illa. Katso ohjeet: [`setup/github-classroom-setup.md`](../../setup/github-classroom-setup.md#533-korjaa-linkit-github-classroomissa)
-
 - See [Student Guide](https://repodin-education.github.io/vibe-coding-materials/student-guide.html)
 - Check [FAQ](https://repodin-education.github.io/vibe-coding-materials/faq.html)
-- Ask in help channel
+- Ask help ;)
 
 ---
 
 **Good luck! 🚀**
+
 
 
 
