@@ -1,0 +1,66 @@
+name: Autograding - Assignment 2
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  autograde:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Start server
+        run: npm start &
+        env:
+          PORT: 3000
+      
+      - name: Wait for server
+        run: |
+          timeout 30 bash -c 'until curl -f http://localhost:3000/api/hello; do sleep 1; done'
+      
+      - name: Test endpoint exists
+        run: |
+          response=$(curl -s http://localhost:3000/api/hello)
+          echo "$response" | grep -q "Hello Vibe!" || exit 1
+      
+      - name: Test JSON format
+        run: |
+          response=$(curl -s http://localhost:3000/api/hello)
+          echo "$response" | jq -e '.message' || exit 1
+      
+      - name: Test HTML file exists
+        run: |
+          test -f client/index.html || exit 1
+      
+      - name: Test HTML has fetch
+        run: |
+          grep -q "fetch" client/index.html || exit 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
