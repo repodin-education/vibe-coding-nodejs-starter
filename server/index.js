@@ -10,7 +10,7 @@ app.use((req, res, next) => {
 });
 
 // Assignment 2: Hello World endpoint
-// TODO: Implement GET /api/hello endpoint that returns { message: "Hello Vibe!" }
+// TODO: Implement GET /api/hello endpoint that returns { message: "Hello World!" }
 // Use Cursor AI to help you implement this!
 
 app.listen(PORT, () => {
